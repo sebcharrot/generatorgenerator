@@ -1,0 +1,231 @@
+/** Generic rules **/
+body {
+    margin: 0;
+}
+
+header {
+    background: #efefef;
+    margin: 0 0 30px 0;
+    padding: 10px 10px 20px 10px;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+input, select {
+    height: 21px;
+    line-height: 21px;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+hr {
+    margin: 35px 20%;
+    border-style: groove;
+}
+
+/** Home **/
+.gg-pre-title {
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.gg-title {
+    text-align: center;
+    margin-top: 0;
+}
+
+.gg-description {
+    text-align: center;
+    font-style: italic;
+}
+
+.gg-create {
+}
+
+.gg-home-content {
+    text-align: center;
+    margin: 0 30px;
+}
+
+.gg-home-content a {
+    cursor: pointer;
+}
+
+.gg-text strong {
+    font-style: italic;
+}
+
+.gg-h2 {
+    margin: 15px 0 10px 0;
+    font-size: 28px;
+}
+
+.gg-links {
+    margin: 0;
+    padding: 0;
+}
+
+.gg-links li {
+
+list-style: none;
+}
+
+.gg-links a {
+
+}
+
+/** Header **/
+.gg-header {
+    padding: 10px;
+}
+
+.gg-header a {
+}
+
+.gg-header a h1 {
+    margin: 0;
+}
+
+/** Content **/
+.gg-content {
+}
+
+.gg-preview {
+    border: 1px solid black;
+    padding: 15px;
+    margin: 20px 15px;
+    box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.36);
+    text-align: center;
+}
+
+.gg-preview h1 {border-bottom: 1px solid #cecece;margin: 5px 20px;padding-bottom: 15px;font-size: 130%;}
+
+.gg-generated-string {
+    font-size: 220%;
+}
+
+.gg-refresh {
+    padding: 10px 0 0 0;
+}
+
+/** View **/
+
+.gg-view {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.gg-view a {
+    display: block;
+}
+
+/** Edit **/
+
+.gg-edit {
+    margin: 0 15px;
+}
+
+.gg-edit h2 {
+    margin-bottom: 15px;
+}
+
+#generatorName {
+    width: 100%;
+    height: 30px;
+    margin: 5px 0 10px 0;
+    display: none;
+    display: block;
+    padding: 2px;
+}
+
+.gg-capitalise {
+    text-transform: capitalize;
+}
+
+.gg-form {
+    display: inline-block;
+    width: 100%;
+}
+
+.gg-field-container {
+    width: 100%;
+    clear: both;
+    float: left;
+}
+
+.gg-field-number {
+    display: none;
+}
+
+.gg-field {
+    border-bottom: 1px solid #bfbfbf;
+    display: inline-block;
+    width: 100%;
+}
+
+.gg-input {
+    margin-bottom: 10px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.gg-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.gg-move-button {
+    height: 60px;
+    border: none;
+    background: none;
+}
+
+.gg-move-button:hover {
+    cursor: pointer;
+}
+
+.gg-move-buttons img {
+    width: 10px;
+    height: 10px;
+}
+
+.gg-move-buttons button[disabled] img {
+    opacity: .3;
+}
+
+.gg-add-buttons {
+    margin-top: 0;
+    text-align: right;
+}
+
+.gg-add-button {
+    
+}
+
+.gg-button {
+    border-radius: 2px;
+    border: 1px solid #989898;
+    padding: 5px 10px;
+    background-color: #ececec;
+    box-shadow: 0 1px 0px 0px #8e8e8e;
+    cursor: pointer;
+}
+
+.gg-move-buttons {
+    float: right;
+    padding: 0 10px;
+}
+
+.gg-credits {
+    margin: 20px 8px 0 8px;
+}
+
+.gg-powered-by {
+    text-align: center;
+    padding-right: 20px;
+}
+
+.gg-hr-footer {
+}

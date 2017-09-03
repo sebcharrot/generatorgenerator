@@ -1,0 +1,35 @@
+<html ng-app="mainApp">
+    <head>
+        <base href="/">
+        <title>Generator Generator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+        <link rel="stylesheet" type="text/css" href="/libs/bootstrap/bootstrap-flatly.min.css" />
+    </head>
+    <body >
+        
+        <div class="gg-content" ng-view></div>
+
+        <hr class="gg-hr-footer">
+
+        <div class="gg-powered-by">
+                Powered by the <a href="/">Generator Generator</a>
+                <br>
+                Code available on <a href="https://github.com/sebcharrot/generatorgenerator">Github</a>
+                <br>
+                &copy; Seb Charrot 2017
+                
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/services/ggEventService.js"></script>
+        <script src="js/services/ggFormatService.js"></script>
+        <script src="js/services/ggListService.js"></script>
+        <script src="js/components/ggGenerate.js"></script>
+        <script src="js/components/ggGeneratedString.js"></script>
+        <script src="js/components/ggField.js"></script>
+    </body>
+</html>

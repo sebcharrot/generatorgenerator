@@ -1,0 +1,60 @@
+<div class="gg-field">
+    
+    <!-- Label -->
+    <div class="gg-input" ng-if="$ctrl.config.showLabels">
+        <label for="name" class="gg-label">Name:</label> <!-- TODO these names and IDs aren't unique -->
+        <input type="text" name="name" ng-model="$ctrl.field.name" required>
+    </div>
+
+    <!--Type-->
+    <div class="gg-input">
+        <label for="type" class="gg-label">
+            Type:
+        </label>
+        <select name="type" ng-model="$ctrl.field.type" required>
+            <option>Text</option>
+            <option selected>List</option>
+        </select>
+    </div>
+
+    <!--Fixed Value-->
+    <div class="gg-input" ng-if="$ctrl.field.type==='Text'">
+        <label for="fixedvalue" class="gg-label">Value:</label>
+        <input type="text" name="fixedvalue" ng-model="$ctrl.field.value" required>
+    </div>
+
+    <!--Lists-->
+    <div class="gg-input" ng-if="$ctrl.field.type==='List'">
+
+        <label for="list" class="gg-label">List Items:</label>
+        <select 
+            name="type" 
+            ng-model="$ctrl.field.list" 
+            ng-options="list.name group by list.group for list in $ctrl.lists"
+            ng-change="$ctrl.updateValue()"
+            required>
+        </select>
+    </div>
+
+    <!-- Up/Down Buttons -->
+    <div class="gg-move-buttons">
+        <button
+            class="gg-move-button"
+            ng-disabled="$ctrl.field.id === 0" 
+            ng-click="$ctrl.events.up($ctrl.field.id)">
+            <img src="/img/chevron-arrow-up.svg" alt="Up">
+        </button>
+        <button
+            class="gg-move-button"        
+            ng-disabled="$ctrl.field.id === $ctrl.config.fields.length-1" 
+            ng-click="$ctrl.events.down($ctrl.field.id)">
+            <img src="/img/chevron-arrow-down.svg" alt="Down">            
+        </button>
+        <button
+        class="gg-move-button"
+        ng-click="$ctrl.events.remove($ctrl.field.id)">
+        <img src="/img/remove-symbol.svg" alt="Remove">            
+    </button>
+    </div>
+
+</div>

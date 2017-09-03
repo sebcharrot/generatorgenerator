@@ -1,0 +1,87 @@
+<div class="gg-preview">
+    <h1>{{$ctrl.config.name}}</h1>
+    <gg-generated-string config="$ctrl.config"></gg-generated-string>
+</div>
+
+<!-- VIEW MODE -->
+<div class="gg-view" ng-show="$ctrl.mode==='view'">
+    <a href="" ng-click="">Share</a>
+    <a href="" ng-click="$ctrl.edit()">Edit this Generator</a>
+    <a href="/#/edit">Create your own</a>
+</div> 
+
+<!-- EDIT MODE -->
+<div class="gg-edit" ng-hide="$ctrl.mode!=='edit'">
+
+    <h2>Edit Generator</h2>
+
+    <!--Name-->
+    <label for="generatorName" class="gg-label">Generator Name:</label>
+    <input name="generatorName" id="generatorName" type="text" ng-model="$ctrl.config.name" />
+
+    <!-- Options -->
+    <!-- <fieldset>
+        <legend>Options:</legend> -->
+        <!--Show Labels-->
+        <!-- <input name="showLabels" type="checkbox" ng-model="$ctrl.config.showLabels" />
+        <label for="showLabels" class="">Show Labels</label> -->
+        <!--Capitalise-->
+        <!-- <input name="capitalise" type="checkbox" ng-model="$ctrl.config.capitalise" />
+        <label for="capitalise" class="">Capitalise</label> -->
+        <!--Remove Spaces-->
+        <!-- <input name="removeSpaces" type="checkbox" ng-model="$ctrl.config.removeSpaces" />
+        <label for="removeSpaces" class="">Remove Spaces</label>
+    </fieldset> -->
+
+    <!-- <hr>
+
+    <h2>FIELDS</h2> -->
+
+    <!-- No fields -->
+    <div ng-if="$ctrl.config.fields.length < 1">
+        There are no fields. 
+        <a href="" ng-click="$ctrl.addField()">Add one</a>
+    </div>
+
+    <!-- Fields -->
+    <form class="gg-form" name="config" ng-if="$ctrl.config.fields.length > 0">
+
+        <!-- Field -->
+        <div ng-repeat="field in $ctrl.config.fields | orderBy: field.id" class="gg-field-container">
+
+            <div class="gg-field-number"> {{$index+1}} </div>
+            <gg-field 
+                field="field"
+                events="$ctrl.events"
+                config="$ctrl.config">
+            </gg-field>
+
+        </div>
+
+    </form>
+
+    <!--Add Field-->
+    <div class="gg-add-buttons">
+        <button 
+            ng-click="$ctrl.addField('List')" 
+            type="button"
+            class="btn btn-info">
+            Add List
+        </button>
+
+        <button 
+            ng-click="$ctrl.addField('Text')" 
+            type="button"
+            class="btn btn-info">
+            Add Text
+        </button>
+
+        <!-- Save Button -->
+        <button 
+            type="button" 
+            ng-click="$ctrl.save()" 
+            class="btn btn-success">
+            Save
+        </button>
+    </div>
+</div>
