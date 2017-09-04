@@ -46,7 +46,13 @@ hr {
 
 .gg-home-content {
     text-align: center;
-    margin: 0 30px;
+    margin: auto;
+    max-width: 600px;
+}
+
+.gg-home-wrapper {
+    padding: 0 20px;
+    width: 100%;
 }
 
 .gg-home-content a {
